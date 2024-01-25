@@ -1024,7 +1024,7 @@
 /extensions/searchcaster                             @gskril @pernielsentikaer
 /extensions/seedsnote                                @nanbingxyz
 /extensions/semantic-scholar                         @blainerothrock
-/extensions/send-to-flomo                            @ahonn @fankaidev @pernielsentikaer @thishym
+/extensions/send-to-flomo                            @ahonn @fankaidev @pernielsentikaer @thishym @maidangzhu
 /extensions/sensible                                 @michaelwschultz
 /extensions/sentry                                   @thomaspaulmann @mattisssa @NoorBayari
 /extensions/sequel-ace                               @nagauta @macbookandrew
@@ -1112,7 +1112,7 @@
 /extensions/superpassgen                             @techvlad
 /extensions/superwhisper                             @nchudleigh
 /extensions/surfs-up                                 @comoser
-/extensions/surge                                    @ysj151215
+/extensions/surge                                    @ysj151215 @Hopsken
 /extensions/svelte-docs                              @paoloricciuti
 /extensions/svgl                                     @davidho0403
 /extensions/svgo                                     @kaichii @kgrhartlage
@@ -1170,6 +1170,7 @@
 /extensions/tinypng                                  @kawamataryo
 /extensions/tip-calculator                           @Visual-Studio-Coder @pernielsentikaer
 /extensions/tldr                                     @pomdtr
+/extensions/tldraw                                   @zephraph
 /extensions/tmdb                                     @Aayush9029 @andreaselia @thomaslombart @j3lte
 /extensions/tmux-sessioner                           @louishuyng @sxn
 /extensions/todo-list                                @maggie-j-liu @joshkorol @madza91 @bkeys818 @pernielsentikaer @telmen
