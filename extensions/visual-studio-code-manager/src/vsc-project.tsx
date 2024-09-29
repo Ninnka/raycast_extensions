@@ -11,6 +11,7 @@ import { Preferences, ProjectEntry, VSCodeBuild } from "./types";
 import { allProject } from "./search-project";
 import recentProject from "./recent-project";
 import { openProjectInNewTab, openProjectInNewWindow } from "./open-in-iterm";
+import { getAppkey } from "./util";
 
 const commandIconPath = resolve(__dirname, "assets/command-icon.png");
 
@@ -23,14 +24,8 @@ const terminalPath = preferences.terminalAppPath || "";
 const terminalInstalled = existsSync(terminalPath);
 
 const build: VSCodeBuild = preferences.build;
-const appKeyMapping = {
-  Code: "com.microsoft.VSCode",
-  "Code - Insiders": "com.microsoft.VSCodeInsiders",
-  "VSCodium < 1.71": "com.visualstudio.code.oss",
-  VSCodium: "com.vscodium",
-  Cursor: "Cursor",
-} as const;
-const appKey: string = appKeyMapping[build] ?? appKeyMapping.Code;
+
+const appKey = getAppkey();
 
 const STORAGE = `${homedir()}/Library/Application Support/${build}/User/globalStorage/alefragnani.project-manager`;
 
