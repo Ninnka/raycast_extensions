@@ -12,6 +12,7 @@ import { allProject } from "./search-project";
 import recentProject from "./recent-project";
 import { openProjectInNewTab, openProjectInNewWindow } from "./open-in-iterm";
 import { getAppkey } from "./util";
+import { newWarpTab, newWarpWindow } from "./open-in-warp";
 
 const commandIconPath = resolve(__dirname, "assets/command-icon.png");
 
@@ -131,6 +132,16 @@ function ProjectListItem(props: { projectItem: ProjectEntry; onClick?: any }) {
                 }}
               />
             )}
+            <Action.OpenInBrowser
+              title="Open in New Warp Window"
+              url={newWarpWindow(path)}
+              shortcut={{ modifiers: ["cmd"], key: "o" }}
+            />
+            <Action.OpenInBrowser
+              title="Open in New Warp Tab"
+              url={newWarpTab(path)}
+              shortcut={{ modifiers: ["cmd", "shift"], key: "o" }}
+            />
             {terminalInstalled && isItermApp() && !isNewWindow(path) && (
               <Action
                 title="Open in Terminal (New Window)"
