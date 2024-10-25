@@ -89,7 +89,9 @@ async function findWorkspace(parentPath: string, prefix = "") {
 
 async function readMainProject(parentPath: string) {
   const files = await fse.readdir(parentPath);
-  const availableFiles = files.filter((item: any) => filterIgnore(item));
+  const availableFiles = files.filter((item: any) => {
+    return filterIgnore(item) && fse.statSync(path.join(parentPath, item)).isDirectory();
+  });
   const wsFiles = await Promise.all(
     availableFiles
       .map(async (file: any) => {
